@@ -3,6 +3,8 @@ import 'package:book_club/widgets/ourContainer.dart';
 import 'package:flutter/material.dart';
 
 class OurSignUpForm extends StatelessWidget {
+  const OurSignUpForm({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return OurContainer(
@@ -58,8 +60,8 @@ class OurSignUpForm extends StatelessWidget {
           const SizedBox(
             height: 20.0,
           ),
-          RaisedButton(
-            child: Padding(
+          ElevatedButton(
+            child: const Padding(
               padding: EdgeInsets.symmetric(horizontal: 100),
               child: Text(
                 "Sign Up",

@@ -26,6 +26,16 @@ class OurTheme {
           ),
         ),
       ),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          primary: _darkerGrey,
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20.0),
+          ),
+          minimumSize: const Size(200, 40),
+        ),
+      ),
       buttonTheme: ButtonThemeData(
         buttonColor: _darkerGrey,
         padding: EdgeInsets.symmetric(horizontal: 20.0),

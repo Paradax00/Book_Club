@@ -3,13 +3,16 @@ import 'package:book_club/widgets/ourContainer.dart';
 import 'package:flutter/material.dart';
 
 class OurLoginForm extends StatelessWidget {
+  const OurLoginForm({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return OurContainer(
       child: Column(
         children: <Widget>[
           Padding(
-            padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 8.0),
+            padding:
+                const EdgeInsets.symmetric(vertical: 20.0, horizontal: 8.0),
             child: Text(
               "Log In",
               style: TextStyle(
@@ -20,26 +23,26 @@ class OurLoginForm extends StatelessWidget {
             ),
           ),
           TextFormField(
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               prefixIcon: Icon(Icons.alternate_email),
               hintText: "Email",
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20.0,
           ),
           TextFormField(
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               prefixIcon: Icon(Icons.lock_outline),
               hintText: "Password",
             ),
             obscureText: true,
           ),
-          SizedBox(
+          const SizedBox(
             height: 20.0,
           ),
-          RaisedButton(
-            child: Padding(
+          ElevatedButton(
+            child: const Padding(
               padding: EdgeInsets.symmetric(horizontal: 100),
               child: Text(
                 "Log In",
@@ -52,9 +55,11 @@ class OurLoginForm extends StatelessWidget {
             ),
             onPressed: () {},
           ),
-          FlatButton(
-            child: Text("Don't have an account? Sign up here"),
-            materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+          TextButton(
+            child: const Text("Don't have an account? Sign up here"),
+            // materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+            style: TextButton.styleFrom(
+                tapTargetSize: MaterialTapTargetSize.shrinkWrap),
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
