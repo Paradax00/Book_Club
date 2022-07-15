@@ -9,7 +9,7 @@ class OurLoginForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return OurContainer(
       child: Column(
-        children: <Widget>[
+        children:[
           Padding(
             padding:
                 const EdgeInsets.symmetric(vertical: 20.0, horizontal: 8.0),
@@ -56,14 +56,21 @@ class OurLoginForm extends StatelessWidget {
             onPressed: () {},
           ),
           TextButton(
-            child: const Text("Don't have an account? Sign up here"),
+            child: Text(
+              "Don't have an account? Sign up here",
+              style: TextStyle(
+                  // ignore: deprecated_member_use
+                  color: Theme.of(context).accentColor,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 14),
+            ),
             // materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
             style: TextButton.styleFrom(
                 tapTargetSize: MaterialTapTargetSize.shrinkWrap),
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (context) => OurSignUp(),
+                  builder: (context) => const OurSignUp(),
                 ),
               );
             },

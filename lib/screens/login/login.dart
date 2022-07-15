@@ -14,13 +14,13 @@ class OurLogin extends StatelessWidget {
           children: <Widget>[
             Expanded(
               child: ListView(
-                padding: EdgeInsets.all(20.0),
+                padding: const EdgeInsets.all(20.0),
                 children: <Widget>[
                   Image.asset("assets/logo.png"),
-                  SizedBox(
+                  const SizedBox(
                     height: 20.0,
                   ),
-                  OurLoginForm(),
+                  const OurLoginForm(),
                 ],
               ),
             )

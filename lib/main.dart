@@ -15,7 +15,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: OurTheme().buildTheme(),
-      home: OurLogin(),
+      routes: {
+        // default route 
+        '/': (BuildContext context) {
+          return const OurLogin();
+        },
+
+      },
     );
   }
 }
